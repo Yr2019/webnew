@@ -1,13 +1,16 @@
 body
-  font-family: sans-serif
-img
-  max-width: 100%
+  +reg
 .container
   width: 1170px
   margin: auto
+h1, h2, h3, h4, h5, h6, p
+  margin: 0
+  padding: 0
 @media (max-width: 1200px)
   .container
-    width: 760px
+    max-width: 760px
+    width: 90%
+    margin: auto
 @media (max-width: 768px)
   .container
     max-width: 580px

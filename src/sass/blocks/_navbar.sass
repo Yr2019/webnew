@@ -14,20 +14,20 @@
     flex-direction: column
     color: $text-color
     font-size: 13px
-    font-weight: 400
     margin-top: -2px
+    +reg
   &__button
     margin-left: 32px
     font-size: 13px
-    font-weight: 400
+    +bold
   &__phone
     display: inline-block
     color: $text-color
     font-size: 20px
-    font-weight: 700
     text-decoration: none
     margin-top: 6px
-@media (max-width: 576px)
+    +bold
+@media (max-width: 768px)
   .navbar
     &__contacts
       display: none
