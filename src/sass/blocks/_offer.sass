@@ -19,11 +19,12 @@
     max-width: 360px
     line-height: 35px
     margin-bottom: 20px
+    text-align: left
   &__subtitle
     max-width: 250px
     margin-bottom: 30px
   &__input
-    margin-bottom: 30px
+    margin-bottom: 35px
     width: 240px
     &:focus
       outline: none
@@ -36,7 +37,7 @@
     +bold
 .form
   &__info
-    margin-top: 31px
+    margin-top: 25px
     display: flex
     justify-content: space-between
   &__info-text
@@ -50,6 +51,23 @@
     +bold
     font-size: 15px
     color: $text-color
+    
+#go-top
+  position: fixed
+  bottom: 25px 
+  right: 10px 
+  cursor:pointer
+  display:none
+  border-radius: 10px
+  background-color: $main-color
+  border: none
+  padding: 10px
+  width: 50px
+  height: 50px
+  img
+    max-width: 100%
+  &:hover 
+    background: lighten($main-color, 10%)
 
 
 @media (max-width: 1200px)
@@ -70,12 +88,31 @@
 
 @media (max-width: 576px)
   .offer
+    padding: 50px 0 50px
     &__title
+      max-width: 260px
       font-size: 18px
+      +bold
+      line-height: 22px
+      margin-bottom: 18px
     &__subtitle
       font-size: 14px
+      margin-bottom: 28px
+    &__input
+      margin-bottom: 14px
+      padding-right: 30px
+    &__button
+      padding: 19px 60px 19px 60px
+      line-height: 18px
+      font-size: 14px
+      min-width: 275px
+      +bold
   .form
+    max-width: 95%
     &__info
       flex-direction: column
-    
+      margin-top: 18px
+      &-text
+        margin-bottom: 3px
+  
     

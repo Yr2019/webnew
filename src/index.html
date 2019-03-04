@@ -5,12 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <title>Lesson_16</title>
+  <title>Lesson_19</title>
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="header">
+  <header class="header" id="header">
     <nav class="navbar">
       <div class="container">
         <div class="navbar-block">
@@ -27,7 +29,7 @@
         </div>
       </div>
     </nav>
-
+    
     <section class="hero">
       <div class="container">
         <div class="hero-block">
@@ -71,7 +73,7 @@
         <span class="section-subtitle offer__subtitle">Оставьте заявку на разработку бесплатного дизайн-проекта!</span>
         <form action="#" class="form offer__form">
           <input type="text" class="input offer__input" placeholder="Ваше имя">
-          <input type="tell" class="input offer__input" placeholder="Ваше телефон">
+          <input type="tel" class="input offer__input" placeholder="Ваш телефон">
           <button class="button offer__button">Получить бесплатный дизайн-проект</button>
           <div class="form__info">
             <div class="form__info-block">
@@ -88,6 +90,20 @@
     </div>
   </section>
 
+  <section class="section portfolio">
+    <div class="container">
+      <h2 class="section-title portfolio__title">Работая с 2007 года,<br> мы сделали более 500 ремонтов в квартирах и домах</h2>
+      <div class="owl-carousel owl-port">
+        <div class="owl__item"><img src="img/portfolio/slider-1.jpg" class="slider__image" alt="1"></div>
+        <div class="owl__item"><img src="img/portfolio/slider-2.jpg" class="slider__image" alt="2"></div>
+        <div class="owl__item"><img src="img/portfolio/slider-3.jpg" class="slider__image" alt="3"></div>
+        <div class="owl__item"><img src="img/portfolio/slider-4.jpg" class="slider__image" alt="4"></div>
+        <div class="owl__item"><img src="img/portfolio/slider-5.jpg" class="slider__image" alt="5"></div>
+        <div class="owl__item"><img src="img/portfolio/slider-6.jpg" class="slider__image" alt="6"></div>
+      </div>
+    </div>
+  </section>
+  
   
   <div class="modal" id="modal">
     <div class="modal-dialog">
@@ -95,7 +111,34 @@
       <h4 class="modal-dialog__title">Всплывающее окно</h4>
     </div>
   </div>
-
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        dots: false,
+        navText: [
+          '<span class="arrow-owl arrow-left"><img src="img/portfolio/left-arrow.png" class="arrow__left" alt="left-arrow"></span>',
+          '<span class="arrow-owl arrow-right"><img src="img/portfolio/right-arrow.png" class="arrow__right" alt="right-arrow"></span>'
+        ],
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 2
+          },
+          1000: {
+            items: 3
+          }
+        }
+      });
+    });
+  </script>
 </body>
 </html>
