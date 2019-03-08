@@ -1,0 +1,138 @@
+.advantages
+  padding: 0 0 228px 0
+.renovation
+  padding: 88px 0 90px
+  background-color: $bg-color-second
+  &-title
+    max-width: 920px
+    margin: 0 auto
+    text-align: center
+    +reg
+    font-size: 32px
+    line-height: 50px
+.safety
+  padding-top: 100px
+  display: flex
+  justify-content: space-between
+  margin-bottom: 136px
+  &-card
+    padding: 25px 25px 0
+    max-width: 370px
+    height: 410px
+    &__title
+      font-size: 16px
+      line-height: 23px
+      +reg
+      color: $text-color-second
+      &_first
+        max-width: 260px
+      &_second
+        max-width: 288px
+      &_third
+        max-width: 282px
+      &_bold
+        font-weight: 700
+    &_first
+      background-image: url(../img/advantages/photo-1.jpg)
+    &_second
+      background-image: url(../img/advantages/photo-2.jpg)
+      margin-right: 30px
+      margin-left: 30px
+    &_third
+      background-image: url(../img/advantages/photo-3.jpg)
+.advantages-title
+  max-width: 700px
+  margin: auto
+  text-align: center
+  font-size: 30px
+  line-height: 45px
+  +bold
+  margin-bottom: 92px
+.archive
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-around
+  &__document
+    width: 295px
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+  &__photo
+    margin-bottom: 35px
+    width: 270px
+    height: 360px
+    border: 20px solid #f5f5f5
+    img
+      width: 100%
+  &__title
+    font-size: 18px
+    +reg
+    line-height: 24px
+    &_first
+      max-width: 185px
+    &_second
+      max-width: 295px
+    &_third
+      max-width: 280px
+    
+@media (max-width: 576px)
+  .renovation
+    padding: 68px 0 75px
+  .renovation-title
+    font-size: 18px
+    max-width: 257px
+    line-height: 22px
+  .safety
+    flex-wrap: wrap
+    padding-top: 65px
+    margin-bottom: 75px
+    
+    &-card
+      padding: 8px 0 0 18px
+      width: 275px
+      height: 300px
+      background-size: cover
+      &_first
+      &_second
+        height: 307px
+      &_third
+        height: 295px
+      &__title
+        font-size: 12px
+        line-height: 20px
+        &_first
+          max-width: 195px
+          line-height: 18px
+        &_second
+          max-width: 215px
+          margin-top: 3px
+          line-height: 18px
+        &_third
+          max-width: 212px
+          line-height: 18px
+      &_second
+        margin: 30px 0
+  .advantages
+    padding: 0 0 52px 0
+    &-title
+      font-size: 18px
+      line-height: 22px
+      max-width: 220px
+      margin-bottom: 35px
+  .archive
+    &__photo
+      margin-bottom: 0
+    &__document
+      margin-bottom: 30px
+    &__title
+      font-size: 14px
+      line-height: 18px
+      &_first
+        margin-top: 40px
+      &_second
+        margin-top: 40px
+        max-width: 225px
+      &_third
+        margin-top: 35px
+        max-width: 225px

@@ -24,7 +24,6 @@
     max-width: 250px
     margin-bottom: 30px
   &__input
-    margin-bottom: 35px
     width: 240px
     &:focus
       outline: none
@@ -35,6 +34,7 @@
     width: 100%
     min-height: 70px
     +bold
+    margin-top: 35px
 .form
   &__info
     margin-top: 25px
@@ -51,11 +51,13 @@
     +bold
     font-size: 15px
     color: $text-color
+    display: block
+
     
 #go-top
   position: fixed
   bottom: 25px 
-  right: 10px 
+  right: 60px 
   cursor:pointer
   display:none
   border-radius: 10px
@@ -101,12 +103,17 @@
     &__input
       margin-bottom: 14px
       padding-right: 30px
+      &:first-child
+        margin-right: 0
     &__button
       padding: 19px 60px 19px 60px
       line-height: 18px
       font-size: 14px
       min-width: 275px
+      margin-top: 0
       +bold
+    &__form-eror
+      flex-wrap: wrap
   .form
     max-width: 95%
     &__info

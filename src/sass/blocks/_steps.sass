@@ -1,0 +1,103 @@
+.step
+  flex-basis: 20%
+  text-align: center
+  position: relative
+  &:after
+    content: ''
+    width: 72px
+    height: 25px
+    position: absolute
+    background: url('../img/steps/arrow.png') no-repeat center
+    top: -10px
+    right: -15%
+  &:last-child
+    &:after
+      display: none
+  &__image
+    width: 100px
+    height: 100px
+    border: 3px solid $main-color
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: auto
+    border-radius: 50%
+    margin-bottom: 26px
+  &__text
+    font-size: 14px
+    max-width: 155px
+    margin: auto
+    font-weight: 600
+    line-height: 20px
+  &s
+    padding-bottom: 94px
+    &__title
+      max-width: 660px
+      margin: auto
+      margin-bottom: 38px
+      +bold
+      font-size: 30px
+      font-weight: 400
+      line-height: 45px
+    &__subtitle
+      text-align: center
+      margin-bottom: 58px
+      font-size: 20px
+      font-weight: 400
+      line-height: 45px
+    &-block
+      display: flex
+      flex-wrap: wrap
+
+@media (max-width: 1200px)
+  .step
+    flex-basis: 50%
+    margin-bottom: 30px
+    &__text
+    &:after
+      display: none
+    &s
+      &-block
+        justify-content: center
+
+
+
+@media (max-width: 576px)
+  .step
+    flex-basis: 100%
+    margin-bottom: 25px
+    &:after
+      display: none
+    &__image
+      margin-bottom: 20px
+    &__text
+      font-size: 12px
+      line-height: 16px
+      &_first
+        margin-top: 33px
+        max-width: 127px
+      &_second
+        margin-top: 33px
+        max-width: 127px
+      &_third
+        margin-top: 28px
+        max-width: 130px
+      &_forth
+        margin-top: 30px
+        max-width: 130px
+    &s
+      padding-top: 20px
+      padding-bottom: 50px
+      &__title
+        margin-bottom: 10px
+        font-size: 18px
+        font-weight: 400
+        line-height: 21px
+      &__subtitle
+        margin-bottom: 20px
+        font-size: 14px
+        font-weight: 400
+        line-height: 45px
+      &-block
+        flex-direction: column
+

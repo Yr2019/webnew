@@ -8,6 +8,9 @@ body
 h1, h2, h3, h4, h5, h6, p
   margin: 0
   padding: 0
+input, input:hover, input:focus, input:active, button, button:hover, button:focus, button:active
+  outline: none
+  offset: 0
 @media (max-width: 1200px)
   .container
     max-width: 760px
@@ -23,6 +26,7 @@ h1, h2, h3, h4, h5, h6, p
   background-color: $main-color
   border: none
   padding: 18px 30px
+  //animation: pulse 2s infinite
   &:hover
     background-color: lighten($main-color, 10%)
     cursor: pointer
@@ -33,6 +37,7 @@ h1, h2, h3, h4, h5, h6, p
     font-size: 24px
     +bold
     text-align: center
+    max-width: 500px
   &-subtitle
     font-size: 16px
     display: block
@@ -43,7 +48,33 @@ h1, h2, h3, h4, h5, h6, p
   font-size: 15px
   border-radius: 10px
 
+
 .arrows
   &__left, &__right
     &:hover
       cursor: pointer
+
+.invalid
+  border: 1px solid red 
+  &:focus, &:active,
+    border: 1px solid red 
+
+.offer__form-eror
+  display: flex
+  position: relative
+
+#username-error
+  border: none
+  position: absolute
+  bottom: -20px
+  left: 0
+#phone-error
+  border: none
+  position: absolute
+  bottom: -20px
+  right: 0
+
+#name-error,
+#email-error,
+#telephone-error,
+  border: none
