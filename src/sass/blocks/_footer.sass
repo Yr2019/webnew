@@ -44,20 +44,28 @@
       +bold
       text-decoration: none
       color: $text-color-second
-
-@media (max-width: 576px)
+@media (max-width: 1200px)
+  .contacts
+    &__title
+      width: 300px
+@media (max-width: 768px)
   .map
-    position: static
-    max-width: 320px
+    position: absolute
+    top: 500px
+    max-width: 768px
     width: 100%
   .footer
     display: flex
     flex-wrap: wrap
     flex-direction: column-reverse
   .contacts
+    margin: 0 auto
+    max-width: 300px
+    position: relative
     flex-basis: 100%
     padding-top: 30px
     padding-left: 30px
     &__title
+      max-width: 300px
       font-size: 18px
       margin-bottom: 40px

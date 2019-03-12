@@ -1,10 +1,21 @@
 @charset "UTF-8";
+@import url("../sass/normalize.css");
+@import url("../sass/owl.carousel.min.css");
+@import url("../sass/animate/_base.css");
+@import url("../sass/animate/attention_seekers/wobble.css");
+@import url("../sass/animate/fading_entrances/fadeInUp.css");
+@import url("../sass/animate/flippers/flip.css");
+@import url("../sass/animate/rotating_entrances/rotateInUpLeft.css");
+@import url("../sass/animate/rotating_entrances/rotateInUpRight.css");
+@import url("../sass/animate/sliding_entrances/slideInLeft.css");
+@import url("../sass/animate/sliding_entrances/slideInRight.css");
 @font-face {
   font-family: 'Museo Sans Light';
   src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.eot");
   src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.woff") format("woff"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+  font-display: auto;
 }
 
 @font-face {
@@ -13,6 +24,7 @@
   src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.woff") format("woff"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+  font-display: auto;
 }
 
 * {
@@ -37,7 +49,6 @@ h1, h2, h3, h4, h5, h6, p {
 
 input, input:hover, input:focus, input:active, button, button:hover, button:focus, button:active {
   outline: none;
-  outline-offset: 0;
 }
 
 @media (max-width: 1200px) {
@@ -130,6 +141,8 @@ input, input:hover, input:focus, input:active, button, button:hover, button:focu
   border: none;
 }
 
+/*Импорт анимации */
+/*Импорт карусель */
 /* Импорт стилей шапки */
 .navbar {
   padding: 8px 0;
@@ -468,6 +481,20 @@ input, input:hover, input:focus, input:active, button, button:hover, button:focu
   }
   .offer__button {
     font-size: 13px;
+  }
+  .offer__form-eror {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .offer #username-error {
+    top: -20px;
+    left: 0;
+  }
+  .offer #phone-error {
+    bottom: -20px;
+    left: 0;
   }
 }
 
@@ -883,9 +910,21 @@ button {
 
 @media (max-width: 1200px) {
   .step {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
+    -ms-flex-preferred-size: 33%;
+        flex-basis: 33%;
     margin-bottom: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .step__text {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
   }
   .step:after {
     display: none;
@@ -894,6 +933,21 @@ button {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .step {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .step__text {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
   }
 }
 
@@ -910,11 +964,13 @@ button {
     margin-bottom: 20px;
   }
   .step__text {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
     font-size: 12px;
     line-height: 16px;
   }
   .step__text_first {
-    margin-top: 33px;
     max-width: 127px;
   }
   .step__text_second {
@@ -922,11 +978,9 @@ button {
     max-width: 127px;
   }
   .step__text_third {
-    margin-top: 28px;
     max-width: 130px;
   }
   .step__text_forth {
-    margin-top: 30px;
     max-width: 130px;
   }
   .steps {
@@ -1094,6 +1148,22 @@ button {
   max-width: 280px;
 }
 
+@media (max-width: 1200px) {
+  .safety {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .safety-card {
+    margin: 0 auto 30px;
+  }
+  .archive__document:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
 @media (max-width: 576px) {
   .renovation {
     padding: 68px 0 75px;
@@ -1110,6 +1180,7 @@ button {
     margin-bottom: 75px;
   }
   .safety-card {
+    margin: 0 auto 30px;
     padding: 8px 0 0 18px;
     width: 275px;
     height: 300px;
@@ -1137,9 +1208,6 @@ button {
   .safety-card__title_third {
     max-width: 212px;
     line-height: 18px;
-  }
-  .safety-card_second {
-    margin: 30px 0;
   }
   .advantages {
     padding: 0 0 52px 0;
@@ -1176,7 +1244,7 @@ button {
 /* Импорт стилей brif */
 .brif {
   padding-bottom: 15px;
-  background-image: url("../img/brif/brif-bg.png"), url("../img/brif/brif-photo-bg.jpg");
+  background-image: url("../img/brif/brif-bg.jpg"), url("../img/brif/brif-photo-bg.jpg");
   background-position: left center, center right;
   background-size: 50%, contain;
   background-repeat: repeat-y, no-repeat;
@@ -1315,6 +1383,13 @@ button {
 }
 
 @media (max-width: 1200px) {
+  .brif {
+    padding-bottom: 15px;
+    background-image: url("../img/brif/brif-bg.png"), url("../img/brif/brif-photo-bg.jpg");
+    background-position: left center, center right;
+    background-size: 50%, cover;
+    background-repeat: repeat-y, no-repeat;
+  }
   .brif__form {
     padding-left: 30px;
   }
@@ -1501,10 +1576,17 @@ button {
   color: #000000;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 1200px) {
+  .contacts__title {
+    width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
   .map {
-    position: static;
-    max-width: 320px;
+    position: absolute;
+    top: 500px;
+    max-width: 768px;
     width: 100%;
   }
   .footer {
@@ -1519,12 +1601,16 @@ button {
             flex-direction: column-reverse;
   }
   .contacts {
+    margin: 0 auto;
+    max-width: 300px;
+    position: relative;
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     padding-top: 30px;
     padding-left: 30px;
   }
   .contacts__title {
+    max-width: 300px;
     font-size: 18px;
     margin-bottom: 40px;
   }
