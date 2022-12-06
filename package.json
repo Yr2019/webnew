@@ -20,7 +20,7 @@
   "devDependencies": {
     "gulp": "^4.0.0",
     "gulp-clean-css": "^4.0.0",
-    "gulp-tinypng-compress": "^1.2.1"
+    "gulp-tinypng-compress": "^1.2.5"
   },
   "dependencies": {
     "gulp-htmlmin": "^5.0.1"
